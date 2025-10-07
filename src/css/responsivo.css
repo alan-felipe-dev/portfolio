@@ -86,12 +86,11 @@
 
 
 @media (max-width: 560px) {
-    html {
-        overflow-x: hidden;
-    }
     body {
         padding: 10px;
         text-align: center;
+        width: 100vw;
+        overflow-x: auto;
     }
 
     .home {
@@ -208,4 +207,5 @@
     }
 
 }
+
 
