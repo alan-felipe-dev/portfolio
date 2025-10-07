@@ -86,10 +86,12 @@
 
 
 @media (max-width: 560px) {
+    html {
+        overflow-x: hidden;
+    
     body {
         padding: 10px;
         text-align: center;
-        overflow-x: hidden;
     }
 
     .home {
@@ -204,4 +206,5 @@
     .hamburger {
         display: flex;
     }
+
 }
