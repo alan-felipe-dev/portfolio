@@ -1,0 +1,433 @@
+body {
+    padding: 50px;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8A2BE2 0%, #4B0082 25%, #000 50%, #8A2BE2 75%, #000 100%);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    color: white;
+    user-select: none;
+    animation: moveGradient 10s infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* MENU HAMBURGUER */
+
+.list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.list li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* MENU HAMBURGUER */
+
+.projetos {
+    display: flex;
+    gap: 120px;
+    margin-left: 250px;
+    margin-top: 150px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.home h1 {
+    font-size: 40px;
+    color: #fff;
+    justify-content: space-between;
+}
+
+
+.list {
+    display: flex;
+    padding: 20px;
+    border-radius: 30px;
+    letter-spacing: 5px;
+    gap: 20px;
+}
+
+.list li a {
+    color: #fff;
+}
+
+.list li a:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.5s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sobre {
+    text-align: center;
+    margin: 100px 0 180px 150px;
+    animation: moveLeft 5s linear forwards;
+    opacity: 0;
+}
+
+.sobre h1 {
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 100px;
+    animation: moveLeft 2s linear forwards;
+    opacity: 0;
+}
+
+.sobre p {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.5s ease;
+    margin: 100px 0 0 -150px;
+}
+
+.btn a {
+    color: #fff;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: blueviolet;
+    transition: left 0.4s ease;
+    mix-blend-mode: overlay;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+
+.title-projetos {
+    margin-bottom: -100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.projetos div {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease-out;
+}
+
+.projetos div.scroll-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 400px);
+    gap: 10px;
+}
+
+.projetos img {
+    animation: aparecendo 2s ease-in-out;
+}
+
+.projetos img:hover {
+    box-shadow: 20px 20px 200px;
+}
+
+.projetos div:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.projetos div:nth-child(2) img {
+    animation-delay: 0.1s;
+}
+
+.projetos div:nth-child(3) img {
+    animation-delay: 0.2s;
+}
+
+.projetos div:nth-child(4) img {
+    animation-delay: 0.3s;
+}
+
+.projetos div:nth-child(5) img {
+    animation-delay: 0.4s;
+}
+
+@keyframes aparecendo {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projetos>div p,
+.projetos>div ul li {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.projetos>div ul {
+    display: flex;
+}
+
+.projetos>div:hover p,
+.projetos>div:hover ul li {
+    opacity: 1;
+    color: #fff;
+    margin-top: 20px;
+    transition: 1.5s;
+    font-weight: 800;
+}
+
+.projetos>div:hover ul li {
+    margin: 5px;
+    transition: 1s;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+}
+
+#html {
+    border: 1px solid #F06529;
+}
+
+#css {
+    border: 1px solid #1E90FF;
+}
+
+#js {
+    border: 1px solid #D4B917;
+}
+
+#api {
+    border: 1px solid #357ABD;
+}
+
+.image {
+    width: 80%;
+    margin-top: 140px;
+}
+
+img {
+    margin-top: 100px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 60%;
+}
+
+img:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.image:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.skills-title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+.skills-section {
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 70px 70px 200px #000;
+    border-radius: 20px;
+    opacity: 0.7;
+    margin-top: 150px;
+}
+
+.skill-row {
+    position: relative;
+    width: 100vw;
+    height: 150px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.skill-row img {
+    border: none;
+}
+
+.skill-track {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 40%;
+    animation: scrollSkills 15s linear infinite;
+}
+
+.skill-track img {
+    height: 125%;
+}
+
+.skill-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: absolute;
+    animation: scrollSkills 20s linear infinite;
+}
+
+.skill-row:nth-child(even) .skill-track {
+    animation-direction: reverse;
+}
+
+@keyframes scrollSkills {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.instituicao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.instituicao-title {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.instituicao p {
+    width: 350px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.instituicao img {
+    width: 500px;
+    height: 400px;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.footer {
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    padding: 50px;
+}
+
+.footer a img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.footer h2 {
+    margin-top: 40px;
+    position: absolute;
+    margin-bottom: 200px;
+}
+
+.footer p {
+    margin: 10px 0 30px;
+}
+
+.github-icon img:hover {
+    opacity: 1;
+}
+
+.linkedin-icon img:hover {
+    opacity: 1;
+}
+
+.whatsapp-icon img:hover {
+    opacity: 1;
+}
